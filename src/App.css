@@ -70,12 +70,11 @@
   font-size: 0.9375rem;
   font-weight: 500;
   cursor: pointer;
-  text-align: left;
   text-decoration: underline;
   transition: all 0.15s ease;
   outline: none;
   margin-top: 0.25rem;
-  display: inline-block;
+  display: inline;
 }
 
 .add-link-link:hover {
