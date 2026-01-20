@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { SunIcon, MoonIcon, XMarkIcon, PlusIcon, TrashIcon } from '@heroicons/react/24/outline'
+import { SunIcon, MoonIcon, XIcon, TrashIcon } from '@primer/octicons-react'
 import './App.css'
 
 function App() {
@@ -164,7 +164,7 @@ function App() {
                     onClick={() => clearField('name')}
                     aria-label="Clear name"
                   >
-                    <XMarkIcon className="icon" />
+                    <XIcon className="icon" size={18} />
                   </button>
                 )}
               </div>
@@ -186,7 +186,7 @@ function App() {
                     onClick={() => clearField('title')}
                     aria-label="Clear title"
                   >
-                    <XMarkIcon className="icon" />
+                    <XIcon className="icon" size={18} />
                   </button>
                 )}
               </div>
@@ -208,7 +208,7 @@ function App() {
                     onClick={() => clearField('phone')}
                     aria-label="Clear phone"
                   >
-                    <XMarkIcon className="icon" />
+                    <XIcon className="icon" size={18} />
                   </button>
                 )}
               </div>
@@ -230,7 +230,7 @@ function App() {
                     onClick={() => clearField('companyWebsite')}
                     aria-label="Clear website"
                   >
-                    <XMarkIcon className="icon" />
+                    <XIcon className="icon" size={18} />
                   </button>
                 )}
               </div>
@@ -252,7 +252,7 @@ function App() {
                     onClick={() => clearField('logoUrl')}
                     aria-label="Clear logo URL"
                   >
-                    <XMarkIcon className="icon" />
+                    <XIcon className="icon" size={18} />
                   </button>
                 )}
               </div>
@@ -284,7 +284,7 @@ function App() {
                       onClick={() => removeLinkRow(link.id)}
                       aria-label="Remove link"
                     >
-                      <TrashIcon className="icon" />
+                      <TrashIcon className="icon" size={18} />
                     </button>
                   </div>
                 ))}
@@ -309,10 +309,10 @@ function App() {
                 aria-label="Toggle theme"
               >
                 <span className={`toggle-segment ${!darkMode ? 'active' : ''}`}>
-                  <SunIcon className="icon" />
+                  <SunIcon className="icon" size={16} />
                 </span>
                 <span className={`toggle-segment ${darkMode ? 'active' : ''}`}>
-                  <MoonIcon className="icon" />
+                  <MoonIcon className="icon" size={16} />
                 </span>
               </button>
               <div
