@@ -237,28 +237,6 @@ function App() {
             </div>
 
             <div className="form-group">
-              <div className="input-wrapper">
-                <input
-                  id="logoUrl"
-                  type="url"
-                  value={formData.logoUrl}
-                  onChange={(e) => handleInputChange('logoUrl', e.target.value)}
-                  placeholder="Logo URL"
-                />
-                {formData.logoUrl && (
-                  <button
-                    type="button"
-                    className="clear-btn"
-                    onClick={() => clearField('logoUrl')}
-                    aria-label="Clear logo URL"
-                  >
-                    <XIcon className="icon" size={18} />
-                  </button>
-                )}
-              </div>
-            </div>
-
-            <div className="form-group">
               <div className="links-section">
                 {formData.additionalLinks.map((link, index) => (
                   <div key={link.id} className="link-row">
