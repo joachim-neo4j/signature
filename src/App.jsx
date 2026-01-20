@@ -43,7 +43,7 @@ function App() {
           <td style="padding: 0 0 4px 0; font-size: 13px; font-weight: 400; color: #000000; line-height: 1.5;">${title || 'Your Title'}</td>
         </tr>
         ${phone ? `<tr><td style="padding: 0 0 12px 0; font-size: 13px; font-weight: 400; color: #000000; line-height: 1.6;">${phone}</td></tr>` : ''}
-        ${logoUrl ? `<tr><td style="padding: 0 0 8px 0;"><a href="${companyWebsite || '#'}" style="text-decoration: none;"><img src="${logoUrl}" alt="${company || 'Company'}" style="max-width: 80px; height: auto; border: 0;" /></a></td></tr>` : ''}
+        ${logoUrl ? `<tr><td style="padding: 0 0 8px 0;"><img src="${logoUrl}" alt="${company || 'Company'}" style="max-width: 80px; height: auto; border: 0;" /></td></tr>` : ''}
         ${companyWebsite ? `<tr><td style="padding: 0 0 4px 0; font-size: 13px; font-weight: 400; line-height: 1.6;"><a href="${companyWebsite}" style="text-decoration: underline;">${companyWebsite}</a></td></tr>` : ''}
         ${socialLinks.length > 0 ? `<tr><td style="padding: 0; font-size: 13px; font-weight: 400; line-height: 1.6;">${socialLinks.join(', ')}</td></tr>` : ''}
       </table>
