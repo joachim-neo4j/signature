@@ -266,14 +266,17 @@ function App() {
                     </button>
                   </div>
                 ))}
-                <button
-                  type="button"
+                <a
+                  href="#"
                   className="add-link-link"
-                  onClick={addLinkRow}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    addLinkRow();
+                  }}
                   aria-label="Add additional link"
                 >
                   Add additional link
-                </button>
+                </a>
               </div>
             </div>
           </section>

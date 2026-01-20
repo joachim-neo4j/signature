@@ -66,11 +66,8 @@
 }
 
 .add-link-link {
-  background: none;
-  border: none;
-  padding: 0;
   color: var(--accent);
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   font-weight: 500;
   cursor: pointer;
   text-align: left;
@@ -78,6 +75,7 @@
   transition: all 0.15s ease;
   outline: none;
   margin-top: 0.25rem;
+  display: inline-block;
 }
 
 .add-link-link:hover {
