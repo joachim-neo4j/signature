@@ -1,0 +1,477 @@
+/* Root variables for premium polish */
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #ffffff;
+  --bg-dark: #1a1a1a;
+  --bg-dark-secondary: #2d2d2d;
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --text-muted: #8a8a8a;
+  --border-color: #e0e0e0;
+  --border-dark: #404040;
+  --accent: #0A6190;
+  --accent-hover: #084d73;
+  --accent-focus: rgba(10, 97, 144, 0.1);
+  --shadow: rgba(0, 0, 0, 0.04);
+  --shadow-hover: rgba(0, 0, 0, 0.08);
+}
+
+/* Base styles */
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  padding: 2rem 1rem;
+  animation: fadeUp 0.4s ease-out;
+  transition: background-color 0.15s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Content Grid */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Form Section */
+.form-section {
+  background: var(--bg-secondary);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  transition: border-color 0.15s ease;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Links Section */
+.links-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.add-link-link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--accent);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  text-decoration: underline;
+  transition: all 0.15s ease;
+  outline: none;
+  margin-top: 0.25rem;
+}
+
+.add-link-link:hover {
+  color: var(--accent-hover);
+  text-decoration: none;
+}
+
+.add-link-link:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.link-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 0.5rem;
+  align-items: start;
+}
+
+.link-input {
+  margin-bottom: 0;
+}
+
+.link-input input {
+  padding-right: 1rem;
+}
+
+.remove-link-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: 1.5px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  outline: none;
+  flex-shrink: 0;
+}
+
+.remove-link-btn:hover {
+  background: #fee;
+  border-color: #fcc;
+  color: #c33;
+}
+
+.remove-link-btn:active {
+  transform: scale(0.95);
+}
+
+.remove-link-btn .icon {
+  width: 18px;
+  height: 18px;
+}
+
+@media (max-width: 640px) {
+  .link-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  
+  .remove-link-btn {
+    width: 100%;
+    height: 40px;
+  }
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper input {
+  width: 100%;
+  height: 40px;
+  padding: 0 2.5rem 0 1rem;
+  font-size: 0.9375rem;
+  font-family: inherit;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  border: 1.5px solid var(--border-color);
+  border-radius: 8px;
+  transition: all 0.15s ease;
+  outline: none;
+}
+
+.input-wrapper input:hover {
+  border-color: #d4d1cd;
+}
+
+.input-wrapper input:focus {
+  border-color: var(--accent);
+  background: var(--bg-secondary);
+  box-shadow: 0 0 0 3px rgba(10, 97, 144, 0.1);
+  outline: none;
+}
+
+.input-wrapper input::placeholder {
+  color: var(--text-muted);
+}
+
+.clear-btn {
+  position: absolute;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.15s ease;
+}
+
+.clear-btn:hover {
+  color: var(--text-primary);
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.clear-btn:active {
+  transform: scale(0.95);
+}
+
+.clear-btn .icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* Button Group */
+.button-group {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  flex: 1;
+  min-width: 140px;
+  height: 40px;
+  padding: 0 1.5rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  font-family: inherit;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  outline: none;
+  letter-spacing: 0.01em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(10, 97, 144, 0.25);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 4px rgba(10, 97, 144, 0.2);
+}
+
+.btn-primary:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Preview Section */
+.preview-section {
+  background: var(--bg-secondary);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  position: sticky;
+  top: 2rem;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.preview-container {
+  position: relative;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 2px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  outline: none;
+  z-index: 10;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.theme-toggle:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  border-color: #d4d1cd;
+}
+
+.theme-toggle:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.toggle-segment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 34px;
+  padding: 0 0.75rem;
+  border-radius: 17px;
+  transition: all 0.15s ease;
+  background: transparent;
+}
+
+.toggle-segment.active {
+  background: var(--border-color);
+}
+
+.theme-toggle .icon {
+  width: 16px;
+  height: 16px;
+  color: var(--text-primary);
+}
+
+.preview-container {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.75rem;
+  min-height: 200px;
+  position: relative;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.preview-content {
+  color: var(--text-primary);
+}
+
+/* Dark mode styles for preview only */
+.app.dark .preview-container {
+  background: var(--bg-dark);
+  border-color: var(--border-dark);
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.app.dark .theme-toggle {
+  background: var(--bg-dark);
+  border-color: #666666;
+  transition: all 0.15s ease;
+}
+
+.app.dark .toggle-segment.active {
+  background: var(--bg-dark-secondary);
+}
+
+.app.dark .theme-toggle .icon {
+  color: #e5e5e5;
+}
+
+.app.dark .preview-content {
+  transition: color 0.15s ease;
+}
+
+.app.dark .preview-content {
+  color: #e5e3e0;
+}
+
+.app.dark .preview-content * {
+  color: #e5e3e0 !important;
+}
+
+.app.dark .preview-content p {
+  color: #e5e3e0 !important;
+}
+
+.app.dark .preview-content table {
+  color: #e5e3e0 !important;
+}
+
+.app.dark .preview-content table td {
+  color: #e5e3e0 !important;
+}
+
+.app.dark .preview-content table td p {
+  color: #e5e3e0 !important;
+}
+
+.app.dark .preview-content a {
+  color: #0000EE !important;
+}
+
+/* Let email clients use their default link color in the actual signature HTML */
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .preview-section {
+    position: static;
+  }
+
+  .form-section,
+  .preview-section {
+    padding: 1.5rem;
+  }
+  
+  .preview-section {
+    top: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .app {
+    padding: 1.25rem 1rem;
+  }
+
+  .form-section,
+  .preview-section {
+    padding: 1.5rem;
+  }
+  
+  .preview-container {
+    padding: 1.5rem;
+  }
+  
+  .preview-section {
+    top: 1.25rem;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+/* Ensure signature HTML styles work in preview */
+.preview-content table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.preview-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.preview-content a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.app.dark .preview-content a {
+  color: #0000EE;
+}
